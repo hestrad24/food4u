@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <script src="script.js" type="text/javascript" defer></script>
+    <title>Food4U</title>
+    
+    <style>
+    @font-face {
+
+      font-family:  Vernon Adams, Jacques Le Bailly, Botjo Nikoltchev, Ani Petrova;
+      
+      src: url(#2121);
+      
+      }
+      </style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+<script>
+  $(document).ready(function(){
+      $('.zoom').hover(function() {
+          $(this).addClass('transition');
+      }, function() {
+          $(this).removeClass('transition');
+      });
+  });
+  </script>
+
+</head>
+<body>
+<nav>
+
+  <label for="" class="brand">
+    <a href=""><img src="logo.png" alt=""></a>
+  </label>
+<ul>
+    <li><a href="https://hestrad24.github.io/inicio-de-sesion/">Inicia Sesion</a></li>
+</ul>
+</nav>
+
+<div class="pantalla-dividida">
+  <div class="izquierda">
+
+  <br>
+  <br>
+<li> <a href="https://www.facebook.com/marketplace/item/486759409728801/" class="btn">Reservación</a></li>
+<div class="menu">
+<div align="left"><img src="menu.png"></div>
+</div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<h1>____________________________________________________________________________________</h1>
+<br>
+<br>
+<br>
+<br>
+
+<div class="container">
+  <div class="fila">
+    <div class="columna">
+        <img src="bread.jpg">
+    </div>
+    <div class="columna">
+        <img src="coffee.jpg">
+    </div>
+</div>
+<div class="fila">
+    <div class="columna">
+        <img src="pizza.jpg">
+    </div>
+    <div class="columna">
+        <img src="sandwich.jpg">
+    </div>
+</div>
+</div>
+<br>
+<br>
+<br>
+
+
+<header>
+    <nav>
+      <ul id="menu">
+        <li><a href="">Misión</a>
+          <ul>
+            <p><li><a href="">Satisfacer las necesidades gastronómicas de nuestros clientes, ofreciendo
+              alimentos y servicios con la más alta calidad, donde se sobrepasen las
+              expectativas de nuestros clientes y ser un espacio de trabajo que permita la
+              realización personal y el Desarrollo de sus colaboradores en el grupo.</a></li></p>
+          </ul>  
+        </li>
+
+        <li><a href="">Vision</a>
+          <ul>
+            <li><a href="">Nuestra visión a futuro es ayudar a crear una localidad más saludable,
+              más consciente sobre su nutrición, y que nuestra ciudad tenga una opción
+              confiable y de bajo costo para comer bien, sin sacrificar el placer de comer.</a></li>
+          </ul>  
+        </li>
+         
+        <li><a href="">Valores</a>
+          <ul>
+            <p><li><a href="">Honestidad, confianza, firmeza, responsabilidad y liderazgo.</a></li></p>
+          </ul>  
+        </li>
+
+      </ul>
+    </nav>
+  </header>
+
+<div align="left">
+  <div class="contact_form">
+
+    <div class="formulario">      
+      <h3>Contáctenos</h3>
+
+
+          <form action="submeter-formulario.php" method="post">       
+
+            
+                <p>
+                  <label for="nombre" class="colocar_nombre">Nombre</label>
+                    <input type="text" name="introducir_nombre" id="nombre" required="obligatorio" placeholder="Escribe tu nombre">
+                </p>
+              
+                <p>
+                  <label for="email" class="colocar_email">Email </label>
+                    <input type="email" name="introducir_email" id="email" required="obligatorio" placeholder="Escribe tu Email">
+                </p>
+            
+                <p>
+                  <label for="telefone" class="colocar_telefono">Teléfono</label>
+                    <input type="tel" name="introducir_telefono" id="telefono" placeholder="Escribe tu teléfono">
+                </p>       
+              
+                <p>
+                  <label for="asunto" class="colocar_asunto">Asunto</label>
+                    <input type="text" name="introducir_asunto" id="assunto" required="obligatorio" placeholder="Escribe un asunto">
+                </p>    
+              
+                <p>
+                  <label for="mensaje" class="colocar_mensaje">Mensaje </label>                     
+                                    <textarea name="introducir_mensaje" class="texto_mensaje" id="mensaje" required="obligatorio" placeholder="Deja aquí tu comentario..."></textarea> 
+                                </p>                    
+              
+                <button type="submit" name="enviar_formulario" id="enviar"><p>Enviar</p></button>         
+            
+          </form>
+    </div>  
+  </div>
+</div>
+
+  <div class="calendar">
+    <div class="calendar__info">
+        <div class="calendar__prev" id="prev-month">&#9664;</div>
+        <div class="calendar__month" id="month"></div>
+        <div class="calendar__year" id="year"></div>
+        <div class="calendar__next" id="next-month">&#9654;</div>
+    </div>
+
+    <div class="calendar__week">
+        <div class="calendar__day calendar__item">Lun</div>
+        <div class="calendar__day calendar__item">Mar</div>
+        <div class="calendar__day calendar__item">Mie</div>
+        <div class="calendar__day calendar__item">Jue</div>
+        <div class="calendar__day calendar__item">Vie</div>
+        <div class="calendar__day calendar__item">Sab</div>
+        <div class="calendar__day calendar__item">Dom</div>
+    </div>
+
+    <div class="calendar__dates" id="dates"></div>
+</div>
+
+<div class="wrap">
+  <div class="widget">
+    <div class="reloj">
+    <p id="horas" class="horas"></p>  
+    <p>:</p>
+    <p id="minutos" class="minutos"></p>
+    <p>:</p>
+    <div class="caja-segundos">
+      <p id="ampm" class="ampm"></p>
+      <p id="segundos" class="segundos"></p>
+    </div>
+  </div>
+</div>
+
+<script src="reloj.js"></script>
+
+</div>
+
+ <div id="derecha">
+
+    <h2>Sobre el Restaurante</h2>
+    
+    <div class="slider">
+      <ul>
+        
+          <li><br><img src="bandera.png"> <br>Bogotá Colombia <br></li>
+        
+          <li><img src="hamburguesa.png.jpg"> <br> Hamburguesa Chitta <br><br></li>
+          <li><img src="manhattan.png"> <br> Manhathan 1999- The best gourmet Burger, first place <br></li>
+         <li><img src="st lucia.png"> <br> Stn Lucia 2001- Th royal preference, second place</li>
+          <li><img src="medalla.png"> <br> Bogota, Colombia 2001- La Delicia de Bogota, primer lugar.</li>
+      </ul>
+      <ol>
+          <li class="active"></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+      </ol>
+  </div>
+
+  </div>
+
+</body>
+<script type="text/javascript" src="script.js"></script>
+</html>
